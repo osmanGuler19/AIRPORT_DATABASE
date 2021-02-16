@@ -1,0 +1,5 @@
+CREATE TRIGGER c
+ AFTER UPDATE OR INSERT OR DELETE
+ ON fares
+ FOR EACH ROW
+EXECUTE PROCEDURE customer_update_mileage_sum();
